@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>Detalle</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-row justify-content-center>
+    <ion-col size="10">
+        <ion-card>
+            <ion-card-header>
+              <ion-img [src]="pokemon.img"></ion-img>
+            </ion-card-header>
+        
+            <ion-card-content>
+              <ion-card-title>{{pokemon.name}}</ion-card-title>
+              <div class="attribute">
+                <ion-text>Altura: {{pokemon.height}}</ion-text>
+              </div>
+              <div class="attribute">
+                <ion-text>Peso: {{pokemon.weight}}</ion-text>
+              </div>
+
+              <div class="attribute">
+                <div>
+                  <ion-text>Tipo: </ion-text>                  
+                </div>
+                <div class="types" *ngFor="let type of pokemon.type">
+                  <ion-chip color="secondary">
+                    <ion-label>{{type}}</ion-label>
+                  </ion-chip>
+                </div>
+              </div>
+
+              <div class="attribute">
+                <div>
+                  <ion-text>Debilidades: </ion-text>
+                </div>
+                <div class="types" *ngFor="let weakness of pokemon.weaknesses">
+                  <ion-chip color="danger">
+                    <ion-label>{{weakness}}</ion-label>
+                  </ion-chip>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,22 @@
+ion-img {
+  width: 120px;
+  height: 120px;
+}
+
+ion-card {
+  margin-top: 20px;
+  text-align: center;
+}
+
+ion-card > ion-card-header {
+  display: flex;
+  justify-content: center;
+}
+
+ion-card-title, .attribute{
+  margin-top: 15px;
+}
+
+.types {
+  display: inline-block;
+}

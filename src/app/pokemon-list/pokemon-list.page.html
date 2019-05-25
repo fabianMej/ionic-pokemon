@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar color="secondary">
+    <ion-title>pokemon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-infinite-scroll>
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="cargando más datos">
+
+      <ion-row>        
+        <ion-col size="6" *ngFor="let pokemon of pokemons">
+          <ion-card (click)="showDetail(pokemon)">
+              <ion-card-header>
+                  <ion-img [src]="pokemon.img"></ion-img>
+              </ion-card-header>
+              <ion-card-content>
+                {{pokemon.name}}
+              </ion-card-content>
+            </ion-card>
+        </ion-col>  
+      </ion-row> 
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>
